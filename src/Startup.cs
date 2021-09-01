@@ -246,7 +246,9 @@ namespace FastHttpApi
             builder.RegisterAssemblyTypes(typeof(OtherService).Assembly)
                 .Where(t => t.Name.EndsWith("Service"))
                 .AsImplementedInterfaces();
-            builder.RegisterType(typeof(DbContext)).InstancePerLifetimeScope();
+            builder.RegisterGeneric(typeof(Repository<>))
+                .As(typeof(IRepository<>))
+                .AsImplementedInterfaces();
         }
     }
 }

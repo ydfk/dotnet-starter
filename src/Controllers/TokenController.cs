@@ -6,6 +6,8 @@
 // <date>2021/9/1 16:09:43</date>
 //-----------------------------------------------------------------------
 
+using System.Threading.Tasks;
+using FastHttpApi.Service.Contract;
 using FastHttpApi.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,12 +16,26 @@ namespace FastHttpApi.Controllers
 {
     public class TokenController : ApiController
     {
-        [HttpGet, AllowAnonymous]
-        public string GetToken(string userName, string password)
+        private readonly IUserService _userService;
+
+        public TokenController(IUserService userService)
         {
-            // TODO: 验证用户
-            var userId = $"{userName}{password}";
-            return JwtUtil.GenerateToken(userId);
+            _userService = userService;
+        }
+
+        [HttpGet, AllowAnonymous]
+        public async Task<string> GetToken(string userName, string password)
+        {
+            var user = await _userService.GetUserByUserName(userName);
+
+            if (user != null && user.Password == SecurityUtil.Md5Password(userName, password))
+            {
+                return JwtUtil.GenerateToken(user.Id);
+            }
+            else
+            {
+                return string.Empty;
+            }
         }
     }
 }

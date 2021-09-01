@@ -15,11 +15,11 @@ namespace FastHttpApi.Service.Implement
 {
     public class OtherService : IOtherService
     {
-        private readonly DbContext _dbContext;
+        private readonly IRepository<ExceptionEntity> _exceptionRepository;
 
-        public OtherService(DbContext dbContext)
+        public OtherService(IRepository<ExceptionEntity> exceptionRepository)
         {
-            _dbContext = dbContext;
+            _exceptionRepository = exceptionRepository;
         }
 
         public async Task SaveException(ExceptionEntity exception)
@@ -27,7 +27,7 @@ namespace FastHttpApi.Service.Implement
             exception.CreateAt = System.DateTime.Now;
             exception.UpdateAt = System.DateTime.Now;
             exception.DataStatus = true;
-            await _dbContext.GetCollection<ExceptionEntity>().InsertOneAsync(exception);
+            await _exceptionRepository.Save(exception);
         }
     }
 }

@@ -13,6 +13,8 @@ using FastHttpApi.Utility;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
 using System.Threading.Tasks;
+using FastHttpApi.Entity.User;
+using FastHttpApi.Service.Contract;
 
 namespace FastHttpApi.Middleware
 {
@@ -25,28 +27,25 @@ namespace FastHttpApi.Middleware
             _next = next;
         }
 
-        public async Task Invoke(HttpContext context, DbContext dbContext)
+        public async Task Invoke(HttpContext context)
         {
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
             if (token != null)
             {
-                await attachUserToContext(context, dbContext, token);
+                await AttachUserToContext(context, token);
             }
 
             await _next(context);
         }
 
-        private async Task attachUserToContext(HttpContext context, DbContext dbContext, string token)
+        private async Task AttachUserToContext(HttpContext context, string token)
         {
             if (JwtUtil.VerifyToken(token))
             {
                 var userId = JwtUtil.SerializeJwt(token);
-                // TODO: 数据库查询用户信息
-                context.Items[AppConstant.UserContext] = new UserModel
-                {
-                    Id = userId
-                };
+                var user = await new Repository<UserEntity>().Get<UserModel>(x => x.Id == userId);
+                context.Items[AppConstant.UserContext] = user;
             }
         }
     }
