@@ -26,6 +26,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Controllers;
 
 namespace FastHttpApi
 {
@@ -146,6 +147,12 @@ namespace FastHttpApi
                             Type = ReferenceType.SecurityScheme
                         }
                     }, Array.Empty<string>() }
+                });
+
+                c.CustomOperationIds(apiDesc =>
+                {
+                    var controllerAction = apiDesc.ActionDescriptor as ControllerActionDescriptor;
+                    return  controllerAction.ControllerName+"-"+controllerAction.ActionName;
                 });
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";

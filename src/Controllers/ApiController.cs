@@ -18,7 +18,7 @@ namespace FastHttpApi.Controllers
     /// </summary>
     [ApiController]
     [Authorize]
-    [Route("api/[controller]")]
+    [Route("Api/[controller]")]
     public class ApiController : ControllerBase
     {
         public UserModel UserContext
