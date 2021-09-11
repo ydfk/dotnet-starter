@@ -7,7 +7,6 @@
 //-----------------------------------------------------------------------
 
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using System;
 
 namespace FastHttpApi
@@ -16,10 +15,16 @@ namespace FastHttpApi
     {
         static AppSettings()
         {
-            ////请注意要把当前appsetting.json 文件->右键->属性->复制到输出目录->始终复制
-            ////ReloadOnChange = true 当appsettings.json被修改时重新加载
-            Configuration = new ConfigurationBuilder()
-                .Add(new JsonConfigurationSource { Path = "appsettings.json", ReloadOnChange = true })
+            var config = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            if (env != null)
+            {
+                config.AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true);
+            }
+
+            Configuration = config
                 .Build();
         }
 
