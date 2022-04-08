@@ -10,8 +10,6 @@ using FastDotnet.Service.Contract;
 using FastDotnet.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
 
 namespace FastDotnet.Controllers
 {
