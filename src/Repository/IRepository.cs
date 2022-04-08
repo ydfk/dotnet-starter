@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using FastDotnet.Schema.Base;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using FastHttpApi.Entity.Base;
-using FastHttpApi.Schema.Base;
+using System.Threading.Tasks;
 
-namespace FastHttpApi.Repository
+namespace FastDotnet.Repository
 {
     public interface IRepository<TEntity>
     {

@@ -5,17 +5,17 @@
 // <author>liyuhang</author>
 // <date>2021/9/1 16:09:43</date>
 //-----------------------------------------------------------------------
+using FastDotnet.Entity.User;
+using FastDotnet.Repository;
+using FastDotnet.Schema.User;
+using FastDotnet.Service.Contract;
+using FastDotnet.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FastHttpApi.Entity.User;
-using FastHttpApi.Repository;
-using FastHttpApi.Schema.User;
-using FastHttpApi.Service.Contract;
-using FastHttpApi.Utility;
 
-namespace FastHttpApi.Service.Implement
+namespace FastDotnet.Service.Implement
 {
     public class UserService : IUserService
     {

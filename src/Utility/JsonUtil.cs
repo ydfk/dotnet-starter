@@ -11,7 +11,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 
-namespace FastHttpApi.Utility
+namespace FastDotnet.Utility
 {
     public static class JsonUtil
     {

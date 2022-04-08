@@ -9,7 +9,7 @@
 using Microsoft.Extensions.Configuration;
 using System;
 
-namespace FastHttpApi
+namespace FastDotnet
 {
     public static class AppSettings
     {
@@ -50,7 +50,7 @@ namespace FastHttpApi
         /// <summary>
         /// Jwt Issuer
         /// </summary>
-        public static string JwtIssuer => GetStr("FastHttpApi", "Jwt", "Issuer");
+        public static string JwtIssuer => GetStr("FastDotnet", "Jwt", "Issuer");
 
         #endregion jwt
 

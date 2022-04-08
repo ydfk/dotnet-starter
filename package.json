@@ -1,0 +1,35 @@
+{
+  "name": "dotnet-starter",
+  "version": "1.0.0",
+  "description": "a dotnet template with mongodb",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "cz": "git add . && git cz",
+    "release:major": "standard-version --release-as major --preset gitmoji-config",
+    "release:minor": "standard-version --release-as minor --preset gitmoji-config",
+    "release:patch": "standard-version --release-as patch --preset gitmoji-config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ydfk/dotnet5-starter.git"
+  },
+  "keywords": [
+    "dotnet"
+  ],
+  "author": "ydfk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ydfk/dotnet5-starter/issues"
+  },
+  "homepage": "https://github.com/ydfk/dotnet5-starter#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "commitizen": "^4.2.4",
+    "commitlint-config-gitmoji": "^2.2.5",
+    "conventional-changelog-gitmoji-config": "^1.4.3",
+    "cz-customizable": "^6.3.0",
+    "husky": "^7.0.4",
+    "standard-version": "^9.3.2"
+  }
+}

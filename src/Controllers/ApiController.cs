@@ -6,12 +6,12 @@
 // <date>2021/9/1 11:18:41</date>
 //-----------------------------------------------------------------------
 
-using FastHttpApi.Schema.App;
-using FastHttpApi.Schema.User;
+using FastDotnet.Schema.App;
+using FastDotnet.Schema.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FastHttpApi.Controllers
+namespace FastDotnet.Controllers
 {
     /// <summary>
     /// 提供服务接口
@@ -25,7 +25,7 @@ namespace FastHttpApi.Controllers
         {
             get
             {
-                if (HttpContext.Items != null && HttpContext.Items.ContainsKey(AppConstant.UserContext))
+                if (HttpContext.Items.ContainsKey(AppConstant.UserContext))
                 {
                     return (UserModel)HttpContext.Items[AppConstant.UserContext];
                 }

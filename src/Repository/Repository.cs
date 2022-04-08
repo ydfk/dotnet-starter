@@ -5,8 +5,8 @@
 // <author>liyuhang</author>
 // <date>2021/9/1 13:53:58</date>
 //-----------------------------------------------------------------------
-using FastHttpApi.Entity.Base;
-using FastHttpApi.Schema.Base;
+using FastDotnet.Entity.Base;
+using FastDotnet.Schema.Base;
 using Mapster;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -20,7 +20,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace FastHttpApi.Repository
+namespace FastDotnet.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {

@@ -6,9 +6,9 @@
 // <date>2021/9/1 16:35:39</date>
 //-----------------------------------------------------------------------
 
-using FastHttpApi.Schema.Base;
+using FastDotnet.Schema.Base;
 
-namespace FastHttpApi.Schema.User
+namespace FastDotnet.Schema.User
 {
     public class UserModel : BaseModel
     {

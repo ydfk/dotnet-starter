@@ -8,7 +8,7 @@
 using System;
 using System.Globalization;
 
-namespace FastHttpApi.Extension
+namespace FastDotnet.Extension
 {
     public static class DateTimeExtension
     {

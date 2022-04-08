@@ -6,17 +6,16 @@
 // <date>2021/9/1 15:32:25</date>
 //-----------------------------------------------------------------------
 
-using FastHttpApi.Repository;
-using FastHttpApi.Schema.App;
-using FastHttpApi.Schema.User;
-using FastHttpApi.Utility;
+using FastDotnet.Entity.User;
+using FastDotnet.Repository;
+using FastDotnet.Schema.App;
+using FastDotnet.Schema.User;
+using FastDotnet.Utility;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
 using System.Threading.Tasks;
-using FastHttpApi.Entity.User;
-using FastHttpApi.Service.Contract;
 
-namespace FastHttpApi.Middleware
+namespace FastDotnet.Middleware
 {
     public class JwtMiddleware
     {

@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FastHttpApi.Extension
+namespace FastDotnet.Extension
 {
     public class DistinctComparer<T, V> : IEqualityComparer<T>
     {

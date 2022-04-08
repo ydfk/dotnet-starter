@@ -6,13 +6,13 @@
 // <date>2021/9/1 14:07:44</date>
 //-----------------------------------------------------------------------
 
-using FastHttpApi.Schema.User;
-using FastHttpApi.Service.Contract;
+using FastDotnet.Schema.User;
+using FastDotnet.Service.Contract;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace FastHttpApi.Controllers
+namespace FastDotnet.Controllers
 {
     /// <summary>
     /// 测试

@@ -5,10 +5,10 @@
 // <author>liyuhang</author>
 // <date>2021/9/1 11:57:26</date>
 //-----------------------------------------------------------------------
-using FastHttpApi.Entity.Other;
+using FastDotnet.Entity.Other;
 using System.Threading.Tasks;
 
-namespace FastHttpApi.Service.Contract
+namespace FastDotnet.Service.Contract
 {
     public interface IOtherService
     {

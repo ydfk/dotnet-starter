@@ -6,7 +6,7 @@
 // <date>2021/9/1 17:47:29</date>
 //-----------------------------------------------------------------------
 
-namespace FastHttpApi.Schema.Base
+namespace FastDotnet.Schema.Base
 {
     public class PageQueryModel
     {

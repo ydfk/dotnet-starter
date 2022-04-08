@@ -6,12 +6,12 @@
 // <date>2021/9/1 13:33:41</date>
 //-----------------------------------------------------------------------
 
-using FastHttpApi.Entity.Other;
-using FastHttpApi.Repository;
-using FastHttpApi.Service.Contract;
+using FastDotnet.Entity.Other;
+using FastDotnet.Repository;
+using FastDotnet.Service.Contract;
 using System.Threading.Tasks;
 
-namespace FastHttpApi.Service.Implement
+namespace FastDotnet.Service.Implement
 {
     public class OtherService : IOtherService
     {

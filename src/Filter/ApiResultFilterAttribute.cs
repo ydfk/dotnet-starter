@@ -5,14 +5,14 @@
 // <author>liyuhang</author>
 // <date>2021/9/1 11:55:56</date>
 //-----------------------------------------------------------------------
-using FastHttpApi.Entity.Other;
-using FastHttpApi.Service.Contract;
+using FastDotnet.Entity.Other;
+using FastDotnet.Service.Contract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Serilog;
 using System;
 
-namespace FastHttpApi.Filter
+namespace FastDotnet.Filter
 {
     public class ApiResultFilterAttribute : ActionFilterAttribute
     {

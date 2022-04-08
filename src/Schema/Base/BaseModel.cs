@@ -7,7 +7,7 @@
 //-----------------------------------------------------------------------
 using System;
 
-namespace FastHttpApi.Schema.Base
+namespace FastDotnet.Schema.Base
 {
     public class BaseModel
     {

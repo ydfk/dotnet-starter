@@ -8,7 +8,7 @@
 
 using System.Collections.Generic;
 
-namespace FastHttpApi.Schema.Base
+namespace FastDotnet.Schema.Base
 {
     public class PageResultModel<T>
     {

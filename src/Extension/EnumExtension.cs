@@ -9,7 +9,7 @@ using System;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace FastHttpApi.Extension
+namespace FastDotnet.Extension
 {
     public static class EnumExtension
     {

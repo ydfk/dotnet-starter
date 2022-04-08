@@ -6,10 +6,10 @@
 // <date>2021/9/1 16:32:13</date>
 //-----------------------------------------------------------------------
 
-using FastHttpApi.Entity.Base;
+using FastDotnet.Entity.Base;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace FastHttpApi.Entity.User
+namespace FastDotnet.Entity.User
 {
     [BsonDiscriminator("user")]
     public class UserEntity : BaseEntity

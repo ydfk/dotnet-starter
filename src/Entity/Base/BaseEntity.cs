@@ -10,7 +10,7 @@ using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 
-namespace FastHttpApi.Entity.Base
+namespace FastDotnet.Entity.Base
 {
     public class BaseEntity
     {

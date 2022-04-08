@@ -12,7 +12,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 
-namespace FastHttpApi.Utility
+namespace FastDotnet.Utility
 {
     public static class JwtUtil
     {

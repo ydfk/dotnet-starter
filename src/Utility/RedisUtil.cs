@@ -8,7 +8,7 @@
 
 using StackExchange.Redis.Extensions.Core.Configuration;
 
-namespace FastHttpApi.Utility
+namespace FastDotnet.Utility
 {
     public class RedisUtil
     {
@@ -17,7 +17,7 @@ namespace FastHttpApi.Utility
             var redisConfiguration = new RedisConfiguration()
             {
                 AbortOnConnectFail = true,
-                KeyPrefix = "data_lake_",
+                KeyPrefix = "fastDotnet_",
                 Hosts = new[]
                 {
                     new RedisHost()

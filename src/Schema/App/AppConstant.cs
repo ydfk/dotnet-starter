@@ -6,7 +6,7 @@
 // <date>2021/9/1 17:03:13</date>
 //-----------------------------------------------------------------------
 
-namespace FastHttpApi.Schema.App
+namespace FastDotnet.Schema.App
 {
     public static class AppConstant
     {
